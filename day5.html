@@ -40,12 +40,38 @@
         width: 100%;
         height: 544px;
         display: flex;
+        flex-direction: column;
+        flex-direction: row-reverse;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+       /* justify-content: space-between; try more like these*/
+       /* align-items: center; verticaly center
+       align-items: flex-end; vertically end*/
+        align-items:/* stretch; when the device width any change then it wrap by even space */
     }
     .items{
         height: 200px;
         width: 200px;
         border: 2px solid black;
         margin: 10px;
+    }
+    #box1{
+        background-color: bisque;
+        /* higher the order,later it show up in a container */
+        order: 10;
+        flex-grow: 3;
+        flex-shrink: 3;
+        /* flex-basis: 236px; */
+        /*which one has more flex grow , srink , respectivaly it show more space , less space while the change of size container*/
+        /*by these we can change the default size */
+    }
+    #box5{
+        background-color: rgb(111, 72, 25);
+        order: 20;
+        flex-grow: 2;
+        flex-shrink: 2;
+        align-self: center;
     }
 </style>
 <body>
