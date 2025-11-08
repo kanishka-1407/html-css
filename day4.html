@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 </title>
+    <link rel="stylesheet" href="day4.css">
+</head>
+<style>
+    header{
+        border: 2px solid black;
+    }
+    img{
+        width: 100px;
+        margin: auto;
+        margin-top: 10px;
+        display: block; /*by using these we can make it block element */ 
+        /*by block we can make it on center by using margin top and also set width*/
+
+    }
+    h2{
+        text-align: center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+
+    }
+    .box{
+        border: 2px solid black;
+        background-color: grey;
+        margin: 5px;
+        padding: 0px;
+        display: inline-block;/*by using these we can use block property with in inline conditions*/
+        box-sizing: border-box;/* changes the way the browser calculates the total width and height of an element,means it doesnot count margin */
+        width: 30%;
+    }
+    /* Now for positions: static(by deafult), absolute, sticky and fixed */
+    .container{
+        border: 3px solid black;
+        color: bisque;
+
+    }
+    #id3{
+        /* relative: Positions the element relative to its normal positon and will leave a gap at its normal position*/
+        /* position: relative; */
+        
+        /* absolute: Positions the element relative to the positon of its first parent*/
+        /* position: absolute; */
+
+        /* top: 34px;
+        left: 134px; */
+
+        /* fixed: Positions the element relative to the browser window; */
+        /* position: fixed;
+        right: 4px;
+        bottom: 2px */
+
+        /* sticky: Positions the element relative to the users scroll position */
+        position: sticky;
+        top: 3px;
+    }
+   
+    
+    .boxx{
+        display: inline-block;
+        border: 2px solid red;
+        width: 100px;
+        height: 100px;
+        margin: 3px;
+
+    }
+
+
+</style>
+<body>
+    <header class="top">
+        <img src="image.png" alt="error">
+        <h2>welcome to day 4 html&css</h2>
+    </header>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto, omnis illum, praesentium neque dolorum maiores consequatur asperiores voluptate fugiat veniam? Atque aliquam hic minima itaque nihil veniam, officia sapiente.</p>
+    </div>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto, omnis illum, praesentium neque dolorum maiores consequatur asperiores voluptate fugiat veniam? Atque aliquam hic minima itaque nihil veniam, officia sapiente.</p>
+    </div>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto, omnis illum, praesentium neque dolorum maiores consequatur asperiores voluptate fugiat veniam? Atque aliquam hic minima itaque nihil veniam, officia sapiente.</p>
+    </div>
+    <h3 style="font-size: larger;">Positions </h3>
+    <div class="container">
+        <div class="boxx" id="id1">1</div>
+        <div class="boxx" id="id2">2</div>
+        <div class="boxx" id="id3">3</div>
+        <div class="boxx" id="id4">4</div>
+
+    </div>
+    
+</body>
+</html>
