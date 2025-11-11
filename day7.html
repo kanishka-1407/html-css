@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --primary--color: #ffe4c4; ;
+        --danger--color: black; /* now if we change here ,where we use that var is also change */
+    }
+    .container{
+        display: flex;
+    }
+    .card{
+        background-color: var(--primary--color);
+        /* border: 2px solid brown; */
+        margin: 23px;
+        padding: 10px;
+        box-shadow: 10px 7px var(--danger--color);
+        /* box-shadow: inset 10px 7px black; by  these shadow start insert in under card */
+        /* box-shadow: -10px -7px black; upr k side ho jayega  */
+        box-shadow: 7px 6px 10px 9px var(--danger--color); /* 3rd attribute for blur effect,4th for how much you want to spread */
+
+    }
+    .card h3{
+        text-shadow: 2px 1px grey;
+    }
+    .box{
+        background-color: rgb(237, 207, 207);
+        height: 200px;
+        width: 200px;
+        position: relative;
+        /* animation: one 1s 4;  */
+        animation-name: two;
+        animation-duration: 5s;
+        animation-timing-function: ease-in; /* start with slow end fast  */
+        animation-fill-mode:forwards;
+        animation-delay: 2s; /*start after 2 sec*/
+        /* animation-direction: reverse; ulta chlne lag jayega and we can try more like that */
+    }
+    .anim{
+        background-color: rgb(241, 183, 183);;
+    }
+    @keyframes two{
+        0%{
+            top:0px;
+            left:0px;
+        }
+        25%{
+            top:300px;
+            left:0px;
+        }
+        50%{
+            top:300px;
+            left:300px;
+        }
+        100%{
+            top:0px;
+            left:300px;
+        }
+    }
+    @keyframes one{
+        from{
+            width: 200px;
+        }
+        to{
+            width:400px;
+        }
+    }
+</style>
+<body>
+    <h1>box shadow and text shadow</h1>
+    <div class="container">
+        <div class="card" id="card1"><h3>card1</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio molestias, natus hic pariatur delectus quidem dolore consectetur minus! Modi, praesentium!</p></div>
+        <div class="card" id="card2"><h3>card2</h3> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur obcaecati perferendis recusandae quis rem esse modi quidem repellendus placeat consequatur!</p> </div>
+        <div class="card" id="card3"><h3>card3</h3><p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore molestiae vitae eos eveniet voluptate debitis quibusdam aperiam illum voluptatum commodi!
+        </p></div>
+    </div>
+    <h1>Animation </h1>
+    <div class="anim">
+        <div class="box"></div>
+    </div>
+
+    
+</body>
+</html>

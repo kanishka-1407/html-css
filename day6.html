@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: aliceblue;
+    }
+    /* rem – root element ke font-size ke hisaab se size set hota hai.
+     em – parent element ke font-size ke hisaab se size set hota hai.
+     vh – viewport (screen) ki height ka 1% hota hai, if we set font-size=100vh then it cover whole screen height
+     vw – viewport (screen) ki width ka 1% hota hai, if we set font-size=100vw then it cover whole screen width */
+    .container{
+        border: 3px black solid;
+        width: 1460px;
+        height: 400px;
+        text-align: center;
+        display: block;
+        
+    }
+    .box{
+        font-size: 50px;
+        display: block;
+        
+    }
+    @media (max-width:300px) {
+        #box1{
+            display: block;
+            background-color: aquamarine;
+        }
+    }
+    @media (min-width:300px) and (max-width:500px) {
+        #box2{
+            display: block;
+            background-color: rgb(184, 103, 65);
+        }
+    }
+    @media (min-width:500px) {
+        #box3{
+            display: block;
+            background-color: rgb(3, 50, 37);
+        }
+    }
+    @media (min-width:800px) {
+        #box4{
+            display: block;
+            background-color: rgb(193, 238, 110);
+        }
+    }
+    div >p {
+        background-color: green;
+    }
+    /* by these we can just style that p which is direct child of div  */
+    div+p{
+        background-color: rgb(165, 116, 51);
+    }
+    /* by these we can just style that p which is sibling of div  */
+    .container3{
+        display: block;
+        width: 233px;
+        margin: auto;
+    }
+    input[type='text']{
+        border: 3px solid black;
+    }
+    .list li:nth-child(3){
+        color: brown;
+    }
+    .list li:nth-child(2n+0){
+        color: rgb(51, 27, 208);
+    }
+    .list li:nth-child(odd){/*also use even*/
+        color: rgb(233, 189, 135);
+    }
+    
+    .navigation{
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+    }
+    li{
+        list-style: none;
+        margin: 10px;
+        padding: 10px;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    section::before{
+        content: "this is a content";
+    }
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li>Home</li>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>Fuck Bitches</li>
+            </ul>
+        </nav>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem blanditiis cupiditate ipsam tenetur dignissimos ex laborum quasi porro repudiandae labore.</p>
+        </section>
+    </header>
+    <div class="container">
+        <div class="box" id="box1">thats a phone</div>
+        <div class="box" id="box2">thats a foldable phone</div>
+        <div class="box" id="box3">thats a tablet</div>
+        <div class="box" id="box4">thats a desktop</div>
+    </div>
+
+    <h1>selectors</h1>
+    <div class="container2">
+        <div class="row">
+            <li><p>a indirect p</p></li>
+        </div>
+        <p>direct p</p>
+    </div>
+    <p>another p</p>
+    <h1>Attribute & nth child pseudo Selectors</h1>
+    
+    <div class="container3">
+        <form action=""class="form">
+            Name:<input type="text" placeholder="Name">
+            Password:<input type="number" placeholder="Password">
+            <button>Submit</button>
+        </form>
+        <ul class="list"> 
+            <li class="items" id="item1">item1</li>
+            <li class="items" id="item2">item2</li>
+            <li class="items" id="item3">item3</li>
+            <li class="items" id="item4">item4</li>
+            <li class="items" id="item5">item5</li>
+        </ul>
+    </div>
+
+    
+</body>
+</html>
