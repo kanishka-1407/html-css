@@ -69,6 +69,27 @@
             width:400px;
         }
     }
+    .box2{
+        height: 150px;
+        width: 150px;
+        background-color: red;
+        text-align: center;
+        /* transition-property:background-color;
+        transition-duration: 2s;
+        transition-delay: 1s;
+        transition-timing-function: ease-in; */
+        transition: all 2s ease-in 1s ;
+    }
+    .box2:hover{
+        background-color: pink;
+        height: 250px;
+        width: 250px;
+        border-radius: 100%;
+        transform: rotate(360deg);
+        /* transform: translate(125px,125px); x and y axis pr 125px move ho jayegae */
+        /* transform: scale(2); bda ho jayega
+        transform: skew(10deg); theda ho jayega */
+    }
 </style>
 <body>
     <h1>box shadow and text shadow</h1>
@@ -83,6 +104,10 @@
     <h1>Animation </h1>
     <div class="anim">
         <div class="box"></div>
+    </div>
+    <h1>transition</h1>
+    <div class="container2">
+        <div class="box2">hello</div>
     </div>
 
     

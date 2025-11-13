@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Tutorial</title>
+    <style>
+    .container{
+        display: grid;
+        /* grid-template-columns: 300px 100px 100px; width of columns */
+        /* grid-template-columns: 300px auto 100px; */
+        /* grid-template-columns: 1fr 4fr 1fr; (1 part to the first item, 4 parts to the second item......)*/
+        grid-template-rows: 1fr 1fr 3fr;
+        grid-auto-rows: 2fr; /* other which we not define */
+        /* grid-template-columns: 1fr 4fr 2fr; */
+        grid-template-columns: repeat(4, 2fr); 
+        grid-gap: 1rem;  /*gap between the two grids */
+        /* grid-column-gap: 3rem;
+        grid-row-gap: 1rem;  */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))  /* we use it to make it a responsive site */
+    }
+    .item{
+         
+        background-color: red;
+        border: 2px solid black;
+        padding: 15px 5px;
+    }
+    /* item:first-child{
+       /* grid-column-start: 1;
+        grid-column-end: 3; /* we span 1 or 2 column */
+        /*grid-row-start: 1;
+        grid-row-end: 4; /*we span 1 to 3 rows together*/
+/* in short 
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3; 
+     */
+    .box{
+        background-color: beige ;
+        border: 2px solid brown;
+        padding: 15px;
+    }
+    .container2{
+        display: grid;
+        grid-gap: 7px;
+        grid-template-areas: 
+        'navbar navbar navbar '
+        'section section aside'
+        'footer footer footer'
+    }
+    #navbar{
+        grid-area:navbar ;
+    }
+    #section{
+        grid-area:section ;
+    }
+    #aside{
+        grid-area:aside ;
+    }
+    #footer{
+        grid-area:footer;
+    }
+    </style>
+</head>
+<body>
+    <h1>About Grid</h1>
+    <div class="container">
+        <div class="item">This is Item-1</div>
+        <div class="item">This is Item-2</div>
+        <div class="item">This is Item-3</div>
+        <div class="item">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-10</div>
+        <div class="item">This is Item-11</div>
+        <div class="item">This is Item-12</div>
+        <div class="item">This is Item-13</div>
+        <div class="item">This is Item-14</div>
+        <div class="item">This is Item-15</div>
+        <div class="item">This is Item-16</div>
+        <div class="item">This is Item-17</div>
+        <div class="item">This is Item-18</div>
+        <div class="item">This is Item-19</div>
+        <div class="item">This is Item-20</div>
+    </div>
+    <h1>Layouts Using Grid Template Area</h1>
+    <div class="container2">
+        <div class="box" id="navbar">
+            home  about  contact
+        </div>
+        <div class="box" id="section">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam inventore accusamus eligendi ab laboriosam quae placeat molestiae provident impedit. Ex quis earum voluptates eos mollitia quaerat in pariatur. Facilis in vero sed obcaecati corporis distinctio accusamus ut dicta eaque blanditiis non quidem id eligendi reiciendis a nesciunt voluptatum, repudiandae pariatur debitis ullam corrupti commodi. Quibusdam laboriosam dolorum itaque nihil omnis quia eligendi iste sequi sed rerum placeat nostrum laudantium facere earum unde eum, incidunt repudiandae accusantium iure. Eius suscipit voluptas sit eum fugiat reprehenderit quo quis repellendus voluptates, accusamus magni. Earum assumenda praesentium officiis quaerat est officia sapiente reiciendis delectus.
+        </div>
+        <div class="box" id="aside">
+            Loremlodio natus, consequatur maiores dolore velit adipisci, ea cum omnis earum necessitatibus pariatur debitis reprehenderit voluptatum laborum. Repellat porro, excepturi vero fuga facilis nam, aut quibusdam sit odio necessitatibus exercitationem ratione. ipsum dolor sit amet consectetur adipisicing elit. Ullam inventore accusamus eligendi ab laboriosam quae placeat molestiae provident impedit. Ex quis earum voluptates eos mollitia quaerat in pariatur. Facilis in vero sed obcaecati corporis distinctio accusamus ut dicta eaque blanditiis non quidem id eligendi reiciendis a nesciunt voluptatum, repudiandae pariatur debitis ullam corrupti commodi. Quibusdam laboriosam dolorum itaque nihil omnis quia eligendi iste sequi sed rerum placeat nostrum laudantium facere earum unde eum, incidunt repudiandae accusantium iure. Eius suscipit voluptas sit eum fugiat reprehenderit quo quis repellendus voluptates, accusamus magni. Earum assumenda praesentium officiis quaerat est officia sapiente reiciendis delectus.
+        </div>
+        <div class="box" id="footer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis doloremque similique. Dolorem, quasi labore ullam deserunt dolores ipsum molestiae perspiciatis facere. Est dolor ea, dignissimos libero quibusdam doloribus sequi debitis eum reprehenderit consectetur fuga sint vitae cumque dolorem blanditiis.</div>
+    </div>
+</body>
+</html>
